@@ -1,4 +1,4 @@
- /* Avatar Proxy
+/* Avatar Proxy
  *
  * a proxy script that changes the user's avatar to the target pedestal.
  * 
@@ -10,6 +10,7 @@ using VRC.Udon;
 
 namespace UdonVR.Avatars
 {
+    [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     public class AvatarProxy : UdonSharpBehaviour
     {
         public VRC_AvatarPedestal ped;

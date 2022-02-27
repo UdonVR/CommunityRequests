@@ -56,6 +56,7 @@ namespace UdonVR.UserStuff
         public void PollingToggle()
         {
             isPolling = !isPolling;
+            if (!isPolling) OnPlayerJoined2();
         }
         public void PollingOn()
         {
@@ -63,7 +64,8 @@ namespace UdonVR.UserStuff
         }
         public void PollingOff()
         {
-            isPolling = true;
+            isPolling = false;
+            OnPlayerJoined2();
         }
         public override void PostLateUpdate()
         {

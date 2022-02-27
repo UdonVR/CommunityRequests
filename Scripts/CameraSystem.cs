@@ -4,7 +4,7 @@
  * if you want to add more cameras, copy and paste one of the "Camera X" regions and increment the number.
  *
  * Warning with adding more cameras:
- * Because of the Udon works, the more Public methods you add the slower the script will become.
+ * Because of the way Udon works, the more Public methods you add the slower the script will become.
  * don't add more camera regions then you need, and removed extras that you dont need.
  */
 using UdonSharp;

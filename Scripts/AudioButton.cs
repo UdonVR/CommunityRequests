@@ -11,6 +11,7 @@ using VRC.Udon.Common.Interfaces;
 
 namespace UdonVR.UserStuff
 {
+    [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
     public class AudioButton : UdonSharpBehaviour
     {
         [Tooltip("Not needed in `Play New` is active")]

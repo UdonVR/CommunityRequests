@@ -8,7 +8,7 @@ namespace UdonVR.UserStuff
 {
     public class AudioButton : UdonSharpBehaviour
     {
-        [Tooltip("Not needed in `Play New` is active")]
+        [Tooltip("Not needed if `Play New` is active")]
         [SerializeField]private AudioSource audioSource;
         
         [Tooltip("Audio clip to be played")]

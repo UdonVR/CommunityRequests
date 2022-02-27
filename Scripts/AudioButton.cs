@@ -32,13 +32,13 @@ namespace UdonVR.UserStuff
 
         public void N_PlayAudio()
         {
+            if (audioClip == null)
+            {
+                Debug.LogError("No Audio Clip attached.");
+                return;
+            }
             if (playNew)
             {
-                if (audioClip == null)
-                {
-                    Debug.LogError("No Audio Clip attached.");
-                    return;
-                }
                 AudioSource.PlayClipAtPoint(audioClip,transform.position,vol);
             }
             else

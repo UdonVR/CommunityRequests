@@ -1,3 +1,8 @@
+/* AudioButton
+ * 
+ * Plays a single audio clip when interacted with.
+ * if playNew is true, then it creates an audio source allowing you to play clips over each other.
+ */
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;

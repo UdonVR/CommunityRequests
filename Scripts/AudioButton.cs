@@ -18,7 +18,7 @@ namespace UdonVR.UserStuff
         [SerializeField]private bool playNew = false;
         
         [Tooltip("The volume the audio source gets set to when playing")]
-        [Range(0f,1f)][SerializeField]private float vol;
+        [Range(0f,1f)][SerializeField]private float vol = 0.5f;
 
         public override void Interact()
         {

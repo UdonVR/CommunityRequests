@@ -8,7 +8,7 @@ namespace UdonVR.UserStuff
 {
     public class AudioButton : UdonSharpBehaviour
     {
-        [Tooltip("Not needed if `Play New` is active")]
+        [Tooltip("Not needed in `Play New` is active")]
         [SerializeField]private AudioSource audioSource;
         
         [Tooltip("Audio clip to be played")]
@@ -34,10 +34,20 @@ namespace UdonVR.UserStuff
         {
             if (playNew)
             {
+                if (audioClip == null)
+                {
+                    Debug.LogError("No Audio Clip attached.");
+                    return;
+                }
                 AudioSource.PlayClipAtPoint(audioClip,transform.position,vol);
             }
             else
             {
+                if (audioSource == null)
+                {
+                    Debug.LogError("No Audio Source attached.");
+                    return;
+                }
                 audioSource.Stop();
                 audioSource.volume = vol;
                 audioSource.clip = audioClip;

@@ -1,4 +1,3 @@
-﻿
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -10,16 +9,16 @@ namespace UdonVR.UserStuff
     public class AudioButton : UdonSharpBehaviour
     {
         [Tooltip("Not needed in `Play New` is active")]
-        public AudioSource audioSource;
+        [SerializeField]private AudioSource audioSource;
         
         [Tooltip("Audio clip to be played")]
-        public AudioClip audioClip;
+        [SerializeField]private AudioClip audioClip;
         
         [Tooltip("If true, the button will start a new clip instead of restarting the existing one")]
-        public bool playNew = false;
+        [SerializeField]private bool playNew = false;
         
         [Tooltip("The volume the audio source gets set to when playing")]
-        [Range(0f,1f)]public float vol;
+        [Range(0f,1f)][SerializeField]private float vol;
 
         public override void Interact()
         {

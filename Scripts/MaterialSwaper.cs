@@ -10,8 +10,8 @@ namespace UdonVR.UserStuff
     public class MaterialSwaper : UdonSharpBehaviour
     {
         public GameObject[] rootObjects;
-        [SerializeField] private MeshRenderer[] _meshRenderers;
-        [SerializeField] private int[] _meshRendererInts;
+        private MeshRenderer[] _meshRenderers;
+        private int[] _meshRendererInts;
 
         public Material[] mat1;
         public Material[] mat2;
